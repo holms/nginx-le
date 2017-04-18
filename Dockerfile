@@ -8,6 +8,7 @@ ADD script/le.sh /le.sh
 
 RUN \
  rm /etc/nginx/conf.d/default.conf && \
+ mkdir -p /etc/nginx/ssl && \
  chmod +x /entrypoint.sh && \
  chmod +x /le.sh && \
  apk add  --update certbot tzdata openssl && \
